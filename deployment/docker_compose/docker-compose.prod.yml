@@ -28,6 +28,8 @@ services:
       options:
         max-size: "50m"
         max-file: "6"
+    expose:
+      - 8080
 
 
   background:
