@@ -227,7 +227,7 @@ services:
       - api_server
     restart: always
     environment:
-      - INTERNAL_URL=http://api_server:8082
+      - INTERNAL_URL=$SERVICE_FQDN_API_SERVER_8082
       - WEB_DOMAIN=${WEB_DOMAIN:-}
       - THEME_IS_DARK=${THEME_IS_DARK:-}
 
@@ -327,7 +327,7 @@ services:
       - api_server
       - web_server
     environment:
-      - DOMAIN=localhost
+      - DOMAIN=$SERVICE_FQDN_NGINX 
     expose:
       - 80
     volumes:
